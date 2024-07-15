@@ -1,0 +1,42 @@
+@keyframes changeColor {
+    0% {
+      stroke: white;
+    }
+    100% {
+      stroke: blue;
+    }
+  }
+  
+  .line {
+    stroke: white;
+    animation: changeColor 1s linear infinite;
+  }
+  
+  #line2 {
+    animation-delay: 0.25s;
+  }
+  
+  #line1 {
+    animation-delay: 0.5s;
+  }
+  
+  #line3 {
+    animation-delay: 0.75s;
+  }
+  
+  #line4 {
+    animation-delay: 1s;
+  }
+  
+  #line5 {
+    animation-delay: 1.25s;
+  }
+  
+  #line6 {
+    animation-delay: 1.5s;
+  }
+  
+  #line7 {
+    animation-delay: 2s;
+  }
+  
