@@ -6,8 +6,11 @@ import { ref, push } from 'firebase/database';
 import emailjs from 'emailjs-com';
 import ClipLoader from 'react-spinners/ClipLoader';
 import { dbFirestore, dbRealtime } from './firebase'; // Adjust import based on your firebaseConfig
+import { useTranslation } from 'react-i18next';
 
 const Appointment = () => {
+  const { t } = useTranslation();
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -20,32 +23,46 @@ const Appointment = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    const { firstName, lastName, contactNumber, date } = formData;
-
-    if (!firstName || firstName.length > 32) {
-      newErrors.firstName = 'First Name is required and should be a maximum of 32 characters';
+    const { firstName, lastName, contactNumber, date, time } = formData;
+  
+    // Validate First Name
+    if (!firstName || firstName.length > 32 || !/^[a-zA-Z]+$/.test(firstName)) {
+      newErrors.firstName = t('appointment.errors.firstName');
     }
-
-    if (!lastName || lastName.length > 32) {
-      newErrors.lastName = 'Last Name is required and should be a maximum of 32 characters';
+  
+    // Validate Last Name
+    if (!lastName || lastName.length > 32 || !/^[a-zA-Z]+$/.test(lastName)) {
+      newErrors.lastName = t('appointment.errors.lastName');
     }
-
-    if (!contactNumber || !/^\d{1,12}$/.test(contactNumber)) {
-      newErrors.contactNumber = 'Contact Number is required and should be a maximum of 12 digits';
+  
+    // Validate Contact Number
+    if (!contactNumber || !/^\d{10,12}$/.test(contactNumber)) {
+      newErrors.contactNumber = t('appointment.errors.contactNumber');
     }
-
+  
+    // Validate Date
     const currentDate = new Date();
     const selectedDate = new Date(date);
     const oneWeekFromNow = new Date();
     oneWeekFromNow.setDate(currentDate.getDate() + 7);
-
+  
     if (!date || selectedDate < currentDate.setHours(0, 0, 0, 0) || selectedDate > oneWeekFromNow) {
-      newErrors.date = 'Date is required and should be today or within the next week';
+      newErrors.date = t('appointment.errors.date');
     }
-
+  
+    // Validate Time
+    if (!time) {
+      newErrors.time = t('appointment.errors.timeRequired');
+    } else {
+      const selectedTime = new Date(`${date}T${time}`);
+      if (selectedTime < currentDate) {
+        newErrors.time = t('appointment.errors.timePast');
+      }
+    }
+  
     return newErrors;
   };
-
+  
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
@@ -103,7 +120,7 @@ const Appointment = () => {
       const response = await emailjs.send('service_gzlguod', 'template_b5v2cgp', templateParams, 'e833t81okhH6RC7gB');
 
       console.log('Email sent successfully:', response);
-      alert('Appointment booked successfully!');
+      alert(t('appointment.errors.emailSuccess'));
       setFormData({
         firstName: '',
         lastName: '',
@@ -114,7 +131,7 @@ const Appointment = () => {
       setErrors({});
     } catch (error) {
       console.error('Error booking appointment:', error);
-      alert('Error booking appointment: ' + error.message);
+      alert(t('appointment.errors.emailError', { errorMessage: error.message }));
     } finally {
       setLoading(false);
     }
@@ -131,7 +148,7 @@ const Appointment = () => {
         />
       </div>
       <div className="md:w-1/2 w-full rounded-lg text-left shadow-xl p-6" style={{ backgroundColor: '#ADD8E6' }}>
-        <h2 className="text-2xl font-semibold mb-4 text-center">Book an Appointment</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-center">{t('appointment.title')}</h2>
         {loading ? (
           <div className="flex justify-center items-center">
             <ClipLoader color="#2D4176" loading={loading} size={50} />
@@ -139,7 +156,7 @@ const Appointment = () => {
         ) : (
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="firstName" className="block text-gray-800">First Name</label>
+              <label htmlFor="firstName" className="block text-gray-800">{t('appointment.firstName')}</label>
               <input
                 type="text"
                 id="firstName"
@@ -152,7 +169,7 @@ const Appointment = () => {
               {errors.firstName && <p className="text-red-500">{errors.firstName}</p>}
             </div>
             <div>
-              <label htmlFor="lastName" className="block text-gray-800">Last Name</label>
+              <label htmlFor="lastName" className="block text-gray-800">{t('appointment.lastName')}</label>
               <input
                 type="text"
                 id="lastName"
@@ -165,7 +182,7 @@ const Appointment = () => {
               {errors.lastName && <p className="text-red-500">{errors.lastName}</p>}
             </div>
             <div>
-              <label htmlFor="contactNumber" className="block text-gray-800">Contact Number</label>
+              <label htmlFor="contactNumber" className="block text-gray-800">{t('appointment.contactNumber')}</label>
               <input
                 type="text"
                 id="contactNumber"
@@ -178,7 +195,7 @@ const Appointment = () => {
               {errors.contactNumber && <p className="text-red-500">{errors.contactNumber}</p>}
             </div>
             <div>
-              <label htmlFor="date" className="block text-gray-800">Date</label>
+              <label htmlFor="date" className="block text-gray-800">{t('appointment.date')}</label>
               <input
                 type="date"
                 id="date"
@@ -191,7 +208,7 @@ const Appointment = () => {
               {errors.date && <p className="text-red-500">{errors.date}</p>}
             </div>
             <div>
-              <label htmlFor="time" className="block text-gray-800">Time</label>
+              <label htmlFor="time" className="block text-gray-800">{t('appointment.time')}</label>
               <input
                 type="time"
                 id="time"
@@ -207,7 +224,7 @@ const Appointment = () => {
               className="w-full text-white py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 hover:text-black"
               style={{ backgroundColor: '#32CD32' }}
             >
-              Submit
+              {t('appointment.submit')}
             </button>
           </form>
         )}

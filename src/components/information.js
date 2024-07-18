@@ -1,9 +1,11 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBriefcase, faClock,faLocationDot } from '@fortawesome/free-solid-svg-icons'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faClock, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const InfoComponent = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen p-4">
       {/* SVG Images */}
@@ -283,7 +285,6 @@ const InfoComponent = () => {
         <path d="M155 245.667H185" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
         <path d="M139.348 264V294" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
         <path d="M125 280.667H155" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
-
       </svg>
 
       {/* SVG for bottom left corner */}
@@ -562,30 +563,32 @@ const InfoComponent = () => {
         <path d="M169.348 229V259" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
         <path d="M155 245.667H185" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
         <path d="M139.348 264V294" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
-        <path d="M125 280.667H155" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
-
+        <path d="M125 280.667H155" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" /> 
       </svg>
 
-      <div className="rounded-3xl p-6 w-full max-w-2xl z-10 transition delay-150 hover:scale-110 shadow-2xl " style={{ backgroundColor: '#ADD8E6'}}>
-        <h2 className="text-2xl font-semibold mb-4 text-center">Work Information</h2>
+      <div className="rounded-3xl p-6 w-full max-w-2xl z-10 transition delay-150 hover:scale-110 shadow-2xl" style={{ backgroundColor: '#ADD8E6' }}>
+        <h2 className="text-2xl font-semibold mb-4 text-center">{t('infoComponent.title')}</h2>
         <div className="space-y-4 text-center">
           <div>
-          <h3 className="text-xl font-medium text-gray-900"><FontAwesomeIcon icon={faBriefcase} /> &nbsp; Where I Work</h3>
-            <p className="text-gray-800">AIMS Hospital</p>
-            <p className="text-gray-800">Health One Unity</p>
-            <p className="text-gray-800">Vinayak Orthopedic</p>
+            <h3 className="text-xl font-medium text-gray-900">
+              <FontAwesomeIcon icon={faBriefcase} /> &nbsp; {t('infoComponent.whereIWork')}
+            </h3>
+            <p className="text-gray-800">{t('infoComponent.workPlace')}</p>
           </div>
           <div>
-            <h3 className="text-xl font-medium text-gray-900"><FontAwesomeIcon icon={faClock} /> &nbsp; Work Hours</h3>
-            <p className="text-gray-800">Available 24X7</p>
+            <h3 className="text-xl font-medium text-gray-900">
+              <FontAwesomeIcon icon={faClock} /> &nbsp; {t('infoComponent.workHours')}
+            </h3>
+            <p className="text-gray-800">{t('infoComponent.availability')}</p>
           </div>
           <div>
-            <h3 className="text-xl font-medium text-gray-900"><FontAwesomeIcon icon={faLocationDot} /> &nbsp; Location</h3>
-            <p className="text-gray-800">Modasa, Lunawada</p>
+            <h3 className="text-xl font-medium text-gray-900">
+              <FontAwesomeIcon icon={faLocationDot} /> &nbsp; {t('infoComponent.location')}
+            </h3>
+            <p className="text-gray-800">{t('infoComponent.workLocation')}</p>
           </div>
         </div>
       </div>
-
     </div>
   );
 };

@@ -1,0 +1,110 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "appointment": "Appointment",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hello, I'm",
+        "description": "I am dedicated to providing the best medical care.",
+        "bookAppointment": "Book Appointment",
+        "casesSolved": "Cases Solved",
+        "happyPatients": "Happy Patients",
+        "yearsExperience": "Years of Experience",
+        "name": "Dr. Bhavin Patel"
+    },
+    "about": {
+        "title": "About Me",
+        "paragraph1": "I am Dr. Bhavin Patel, a dedicated medical professional with over a decade of experience in providing top-notch healthcare services. My journey in the medical field has been driven by a passion for helping others and a commitment to excellence.",
+        "paragraph2": "Over the years, I have had the privilege of solving numerous complex cases and bringing smiles to the faces of my patients. My approach combines the latest medical advancements with a compassionate and patient-centric philosophy.",
+        "paragraph3": "When I am not in the clinic, you can find me reading the latest medical journals, attending conferences, and continually updating my knowledge to serve my patients better."
+    },
+    "qualification": {
+        "title": "Experience",
+        "hospitals": [
+            "V.H.S. Hospital, Chennai.",
+            "G.K. General Hospital, Bhuj.",
+            "Unity Hospital, Modasa.",
+            "AIMS Hospital, Modasa. (Continue)"
+        ]
+    },
+    "card": {
+        "title": "Our Neurosurgical Services",
+        "services": [
+            "Brain Tumor",
+            "Pituitary Tumour Surgery",
+            "Cervical / Lumbar Spine Surgery (Intradural)",
+            "Functional Neurosurgery",
+            "Deep Brain Stimulation (DBS)",
+            "Lumbar Puncture",
+            "Craniotomy",
+            "Chiari Decompression",
+            "Epilepsy Neurosurgery"
+        ]
+    },
+    "testimonial": {
+        "title": "Testimonial",
+        "testimonial1": {
+            "text": "This is an amazing testimonial that highlights the exceptional service provided. It has truly made a difference in my experience.",
+            "name": "John Doe",
+            "position": "CEO, Company Inc."
+        },
+        "testimonial2": {
+            "text": "This is an amazing testimonial that highlights the exceptional service provided. It has truly made a difference in my experience.",
+            "name": "Jane Doe",
+            "position": "CTO, Company Inc."
+        },
+        "testimonial3": {
+            "text": "This is an amazing testimonial that highlights the exceptional service provided. It has truly made a difference in my experience.",
+            "name": "Sam Smith",
+            "position": "CFO, Company Inc."
+        }
+    },
+    "appointment": {
+        "title": "Book an Appointment",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "contactNumber": "Contact Number",
+        "date": "Date",
+        "time": "Time",
+        "submit": "Submit",
+        "errors": {
+            "firstName": "First Name is required and should be a maximum of 32 characters",
+            "lastName": "Last Name is required and should be a maximum of 32 characters",
+            "contactNumber": "Contact Number is required and should be a maximum of 10-12 digits",
+            "date": "Date is required and should be today or within the next week",
+            "emailSuccess": "Appointment booked successfully!",
+            "emailError": "Error booking appointment: {{errorMessage}}",
+            "timeRequired": "Time is required.",
+      "timePast": "Selected time should be in the future."
+        }
+    },
+    "infoComponent": {
+        "title": "Work Information",
+        "whereIWork": "Where I Work",
+        "workHours": "Work Hours",
+        "location": "Location",
+        "workPlace": "AIMS Hospital",
+        "availability": "Available 24X7",
+        "workLocation": "Modasa, Lunawada"
+    },
+    "contact": {
+        "emailTitle": "Email",
+        "email": "email@example.com",
+        "contactNumberTitle": "Contact Number",
+        "contactNumber": "+123 456 7890",
+        "name": "Dr. Bhavin Patel",
+        "facebook": "https://www.facebook.com",
+        "instagram": "https://www.instagram.com",
+        "twitter": "https://www.twitter.com"
+    },
+    "copyright": {
+        "text": "© {{year}} Your Company Name. All Rights Reserved."
+    },
+    "pageNotFound": {
+        "title": "Page Not Found",
+        "buttonText": "Go Back to home"
+    }
+}

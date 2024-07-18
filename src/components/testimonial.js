@@ -8,8 +8,11 @@ import svgComma2 from '../pictures/comma2.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 
 const Testimonial = () => {
+  const { t } = useTranslation();
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef(null);
@@ -33,7 +36,7 @@ const Testimonial = () => {
         <path d="M482.834 372.17L420.963 434.042L482.481 282.721L329.392 435.81L463.743 208.122L242.418 429.446L438.287 144.482L144.484 438.285L427.327 74.1249L72.0054 429.446L423.084 1.99997L2.00184 423.082" stroke="#2577B9" strokeWidth="8" />
       </svg>
 
-      <h2 className="text-3xl font-bold text-black text-center py-8 z-10">Testimonial</h2>
+      <h2 className="text-3xl font-bold text-black text-center py-8 z-10">{t('testimonial.title')}</h2>
       <Swiper
         ref={swiperRef}
         spaceBetween={50}
@@ -61,7 +64,7 @@ const Testimonial = () => {
                 className="absolute left-0 top-0 transform -translate-x-1/2 -translate-y-1/2 h-8 w-8"
               />
               <p className="text-gray-800 text-center md:text-left text-lg md:text-xl m-8 px-4">
-                This is an amazing testimonial that highlights the exceptional service provided. It has truly made a difference in my experience.
+                {t('testimonial.testimonial1.text')}
               </p>
               <img
                 src={svgComma2}
@@ -75,8 +78,8 @@ const Testimonial = () => {
                 src="https://via.placeholder.com/150"
                 alt="User Profile"
               />
-              <h3 className="text-xl font-semibold">John Doe</h3>
-              <p className="text-gray-800">CEO, Company Inc.</p>
+              <h3 className="text-xl font-semibold">{t('testimonial.testimonial1.name')}</h3>
+              <p className="text-gray-800">{t('testimonial.testimonial1.position')}</p>
             </div>
           </div>
         </SwiperSlide>
@@ -89,7 +92,7 @@ const Testimonial = () => {
                 className="absolute left-0 top-0 transform -translate-x-1/2 -translate-y-1/2 h-8 w-8"
               />
               <p className="text-gray-800 text-center md:text-left text-lg md:text-xl m-8 px-4">
-                This is an amazing testimonial that highlights the exceptional service provided. It has truly made a difference in my experience.
+                {t('testimonial.testimonial2.text')}
               </p>
               <img
                 src={svgComma2}
@@ -103,8 +106,8 @@ const Testimonial = () => {
                 src="https://via.placeholder.com/150"
                 alt="User Profile"
               />
-              <h3 className="text-xl font-semibold">Jane Doe</h3>
-              <p className="text-gray-800">CTO, Company Inc.</p>
+              <h3 className="text-xl font-semibold">{t('testimonial.testimonial2.name')}</h3>
+              <p className="text-gray-800">{t('testimonial.testimonial2.position')}</p>
             </div>
           </div>
         </SwiperSlide>
@@ -117,7 +120,7 @@ const Testimonial = () => {
                 className="absolute left-0 top-0 transform -translate-x-1/2 -translate-y-1/2 h-8 w-8"
               />
               <p className="text-gray-800 text-center md:text-left text-lg md:text-xl m-8 px-4">
-                This is an amazing testimonial that highlights the exceptional service provided. It has truly made a difference in my experience.
+                {t('testimonial.testimonial3.text')}
               </p>
               <img
                 src={svgComma2}
@@ -131,8 +134,8 @@ const Testimonial = () => {
                 src="https://via.placeholder.com/150"
                 alt="User Profile"
               />
-              <h3 className="text-xl font-semibold">Sam Smith</h3>
-              <p className="text-gray-800">CFO, Company Inc.</p>
+              <h3 className="text-xl font-semibold">{t('testimonial.testimonial3.name')}</h3>
+              <p className="text-gray-800">{t('testimonial.testimonial3.position')}</p>
             </div>
           </div>
         </SwiperSlide>

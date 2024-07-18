@@ -3,40 +3,66 @@ import Typed from 'typed.js';
 import CountUp from 'react-countup';
 import profile from '../pictures/profile.png';
 import { Link as ScrollLink } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
   const typedElement = useRef(null);
+  const typedInstance = useRef(null);
 
   useEffect(() => {
     const options = {
-      strings: ['Dr. Bhavin Patel'],
+      strings: [t('hero.name')],
       typeSpeed: 40,
       showCursor: false,
     };
-    const typed = new Typed(typedElement.current, options);
+    typedInstance.current = new Typed(typedElement.current, options);
 
     // Cleanup
     return () => {
-      typed.destroy();
+      typedInstance.current.destroy();
     };
-  }, []);
+  }, [t]);
+
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      if (typedInstance.current) {
+        typedInstance.current.destroy();
+      }
+      const options = {
+        strings: [t('hero.name')],
+        typeSpeed: 40,
+        showCursor: false,
+      };
+      typedInstance.current = new Typed(typedElement.current, options);
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+      if (typedInstance.current) {
+        typedInstance.current.destroy();
+      }
+    };
+  }, [i18n, t]);
 
   return (
     <>
-      <section className="relative flex flex-col md:flex-row items-center justify-between p-8 pt-16 md:pt-8" style={{  minHeight: '400px', width: '100%', marginTop: '3%', position: 'relative' }}>
+      <section className="relative flex flex-col md:flex-row items-center justify-between p-8 pt-16 md:pt-8" style={{ minHeight: '400px', width: '100%', marginTop: '3%', position: 'relative' }}>
         {/* Left Side - Introduction */}
         <div className="w-full p-8 md:w-1/2 text-center md:text-left m-4">
           <h1 className="text-3xl md:text-4xl font-bold text-black">
-            Hi, Myself <span ref={typedElement}></span>
+            {t('hero.greeting')} <span ref={typedElement}></span>
           </h1>
           <p className="mt-4 text-base md:text-lg text-gray-800">
-            I am a dedicated medical professional with over 10 years of experience in providing top-notch healthcare services.
+            {t('hero.description')}
           </p>
           <ScrollLink to="appointment" smooth={true} duration={500}>
-      <button className="mt-6 px-6 py-3 text-white font-semibold rounded-md hover:text-black" style={{ background: '#32CD32' }}>
-        Book an Appointment
-      </button>
-    </ScrollLink>
+            <button className="mt-6 px-6 py-3 text-white font-semibold rounded-md hover:text-black" style={{ background: '#32CD32' }}>
+              {t('hero.bookAppointment')}
+            </button>
+          </ScrollLink>
         </div>
 
         {/* Right Side - Animation and Photo */}
@@ -64,19 +90,19 @@ const Hero = () => {
           <h2 className="text-2xl font-bold text-gray-100">
             <CountUp end={200} duration={10} />+
           </h2>
-          <p className="text-lg text-gray-200">Cases Solved</p>
+          <p className="text-lg text-gray-200">{t('hero.casesSolved')}</p>
         </div>
         <div className="text-center mb-4 md:mb-0">
           <h2 className="text-2xl font-bold text-gray-100">
             <CountUp end={500} duration={10} />+
           </h2>
-          <p className="text-lg text-gray-200">Happy Patients</p>
+          <p className="text-lg text-gray-200">{t('hero.happyPatients')}</p>
         </div>
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-100">
             <CountUp end={10} duration={10} />+
           </h2>
-          <p className="text-lg text-gray-200">Years of Experience</p>
+          <p className="text-lg text-gray-200">{t('hero.yearsExperience')}</p>
         </div>
       </section>
 

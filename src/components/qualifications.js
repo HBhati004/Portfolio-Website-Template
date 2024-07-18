@@ -1,13 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Qualification = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen mt-18 p-4">
-      <h2 className="text-3xl text-black font-semibold mb-4 text-center">Experience</h2>
+      <h2 className="text-3xl text-black font-semibold mb-4 text-center">{t('qualification.title')}</h2>
 
       {/* SVG Images */}
       <svg className="absolute top-0 right-0 w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 xl:w-1/7" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
         {/* Add your SVG content here */}
+        
         <path d="M121.348 79V109" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
         <path d="M107 95.6665H137" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
         <path d="M248.348 134V164" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
@@ -287,6 +291,7 @@ const Qualification = () => {
       {/* SVG for bottom left corner */}
       <svg className="absolute bottom-0 left-0 w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 xl:w-1/7" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
         {/* Add your SVG content here */}
+        
         <path d="M121.348 79V109" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
         <path d="M107 95.6665H137" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
         <path d="M248.348 134V164" stroke="#2577B9" strokeWidth="4" strokeLinecap="round" />
@@ -565,10 +570,11 @@ const Qualification = () => {
 
       <div className="space-y-4 text-left">
         <ul className="p-8 mt-4 list-disc list-inside text-xl text-gray-800">
-          <li className="mb-2">V.H.S. Hospital, Chennai.</li>
-          <li className="mb-2">G.K. General Hospital, Bhuj.</li>
-          <li className="mb-2">Unity Hospital, Modasa.</li>
-          <li className="mb-2">AIMS Hospital, Modasa. (Continue)</li>
+          {t('qualification.hospitals', { returnObjects: true }).map((hospital, index) => (
+            <li key={index} className="mb-2">
+              {hospital}
+            </li>
+          ))}
         </ul>
       </div>
     </div>

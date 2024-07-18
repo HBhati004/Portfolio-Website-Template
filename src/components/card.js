@@ -8,45 +8,21 @@ import BgImage from '../pictures/6825772.jpg';
 import svgImage from '../pictures/wave.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const Card = () => {
+  const { t } = useTranslation();
+  
   const cards = [
-    {
-      image: require("../pictures/brain-tumor-surgery-color-icon-illustration-vector.png"),
-      CardTitle: "Brain Tumor",
-    },
-    {
-      image: require("../pictures/360_F_506979639_u8HH1Z9CPgxOw3RLeocTI5SI0ELnYk7k.png"),
-      CardTitle: "Pituitary Tumour Surgery",
-    },
-    {
-      image: require("../pictures/depositphotos_173549848-stock-illustration-vector-logo-template-human-spine.png"),
-      CardTitle: "Cervical / Lumbar Spine Surgery (Intradural)",
-    },
-    {
-      image: require("../pictures/functional-neurosurgery-color-icon-vector-41713773.png"),
-      CardTitle: "Functional Neurosurgery",
-    },
-    {
-      image: require("../pictures/serv-neuromod.png"),
-      CardTitle: "Deep Brain Stimulation (DBS)",
-    },
-    {
-      image: require("../pictures/lumbar-puncture.png"),
-      CardTitle: "Lumbar Puncture",
-    },
-    {
-      image: require("../pictures/images.png"),
-      CardTitle: "Craniotomy",
-    },
-    {
-      image: require("../pictures/Chiari-Malformation-awareness-ribbon-with-zipper.png"),
-      CardTitle: "Chiari Decompression",
-    },
-    {
-      image: require("../pictures/istockphoto-1156870811-612x612.png"),
-      CardTitle: "Epilepsy Neurosurgery",
-    },
+    { image: require("../pictures/brain-tumor-surgery-color-icon-illustration-vector.png"), CardTitle: t('card.services.0') },
+    { image: require("../pictures/360_F_506979639_u8HH1Z9CPgxOw3RLeocTI5SI0ELnYk7k.png"), CardTitle: t('card.services.1') },
+    { image: require("../pictures/depositphotos_173549848-stock-illustration-vector-logo-template-human-spine.png"), CardTitle: t('card.services.2') },
+    { image: require("../pictures/functional-neurosurgery-color-icon-vector-41713773.png"), CardTitle: t('card.services.3') },
+    { image: require("../pictures/serv-neuromod.png"), CardTitle: t('card.services.4') },
+    { image: require("../pictures/lumbar-puncture.png"), CardTitle: t('card.services.5') },
+    { image: require("../pictures/images.png"), CardTitle: t('card.services.6') },
+    { image: require("../pictures/Chiari-Malformation-awareness-ribbon-with-zipper.png"), CardTitle: t('card.services.7') },
+    { image: require("../pictures/istockphoto-1156870811-612x612.png"), CardTitle: t('card.services.8') },
   ];
 
   const prevRef = useRef(null);
@@ -73,7 +49,7 @@ const Card = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
         <img src={svgImage} className="absolute -top-1 left-0 w-full" alt="Wave" />
         <div className="container items-center text-center content-center relative z-10 mt-20 mx-auto">
-          <h2 className="text-4xl text-center font-bold -mt-32 mb-12 text-white">Our Neurosurgical Services</h2>
+          <h2 className="text-4xl text-center font-bold -mt-32 mb-12 text-white">{t('card.title')}</h2>
           <Swiper
             spaceBetween={50}
             loop={true}
@@ -136,11 +112,9 @@ const SingleCard = ({
         <img src={image} alt={CardTitle} className="w-full h-full object-cover" />
       </div>
       <div className="flex-grow flex items-center justify-center bg-white p-2 text-center shadow-md" style={{ backgroundColor: '#D5DDEB' }}>
-        
         <span className="block text-xl font-semibold text-black">
             {CardTitle}
-          </span>
-        
+        </span>
       </div>
     </div>
   );

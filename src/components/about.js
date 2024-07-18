@@ -1,9 +1,11 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { useTranslation } from 'react-i18next';
 import aboutAnimationData from '../animations/Animation - 1717156508036.json'; // Replace with your actual animation file
 
 const About = () => {
+  const { t } = useTranslation();
   const { ref: animationRef, inView: animationInView } = useInView({ triggerOnce: true });
   const { ref: textRef, inView: textInView } = useInView({ triggerOnce: true });
 
@@ -37,15 +39,15 @@ const About = () => {
           textInView ? 'transform translate-x-0 opacity-100' : 'transform translate-x-full opacity-0'
         }`}
       >
-        <h2 className="text-3xl font-bold text-black">About Me</h2>
+        <h2 className="text-3xl font-bold text-black">{t('about.title')}</h2>
         <p className="mt-4 text-base md:text-lg text-gray-800">
-          I am Dr. John Doe, a dedicated medical professional with over a decade of experience in providing top-notch healthcare services. My journey in the medical field has been driven by a passion for helping others and a commitment to excellence.
+          {t('about.paragraph1')}
         </p>
         <p className="mt-4 text-base md:text-lg text-gray-800">
-          Over the years, I have had the privilege of solving numerous complex cases and bringing smiles to the faces of my patients. My approach combines the latest medical advancements with a compassionate and patient-centric philosophy.
+          {t('about.paragraph2')}
         </p>
         <p className="mt-4 text-base md:text-lg text-gray-800">
-          When I am not in the clinic, you can find me reading the latest medical journals, attending conferences, and continually updating my knowledge to serve my patients better.
+          {t('about.paragraph3')}
         </p>
       </div>
     </section>
