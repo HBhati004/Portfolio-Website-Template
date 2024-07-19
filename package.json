@@ -1,5 +1,6 @@
 {
   "name": "portfolio-website",
+  "homepage": "https://HBhati004.github.io/Portfolio-Website-Template",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +18,7 @@
     "@testing-library/user-event": "^13.5.0",
     "emailjs-com": "^3.2.0",
     "firebase": "^10.12.2",
+    "gh-pages": "^6.1.1",
     "i18next": "^23.12.1",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-http-backend": "^2.5.2",
@@ -34,6 +36,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
