@@ -58,7 +58,7 @@ const Hero = () => {
           <p className="mt-4 text-base md:text-lg text-gray-800">
             {t('hero.description')}
           </p>
-          <ScrollLink to="appointment" smooth={true} duration={500}>
+          <ScrollLink to="appointment" smooth={true} duration={100}>
             <button className="mt-6 px-6 py-3 text-white font-semibold rounded-md hover:text-black" style={{ background: '#32CD32' }}>
               {t('hero.bookAppointment')}
             </button>
