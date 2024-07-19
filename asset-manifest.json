@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio-Website-Template/static/css/main.14e3e899.css",
-    "main.js": "/Portfolio-Website-Template/static/js/main.e53e34fa.js",
+    "main.js": "/Portfolio-Website-Template/static/js/main.9d38eecd.js",
     "static/js/453.2ddb282f.chunk.js": "/Portfolio-Website-Template/static/js/453.2ddb282f.chunk.js",
     "static/media/lumbar-puncture.png": "/Portfolio-Website-Template/static/media/lumbar-puncture.5c6f216cab8ae88ded55.png",
     "static/media/brain-tumor-surgery-color-icon-illustration-vector.png": "/Portfolio-Website-Template/static/media/brain-tumor-surgery-color-icon-illustration-vector.b543e764f42b2aadf502.png",
@@ -20,11 +20,11 @@
     "static/media/wave.svg": "/Portfolio-Website-Template/static/media/wave.a3087b4cb6c680ca1a526904bf424a92.svg",
     "static/media/getFetch.cjs": "/Portfolio-Website-Template/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
     "main.14e3e899.css.map": "/Portfolio-Website-Template/static/css/main.14e3e899.css.map",
-    "main.e53e34fa.js.map": "/Portfolio-Website-Template/static/js/main.e53e34fa.js.map",
+    "main.9d38eecd.js.map": "/Portfolio-Website-Template/static/js/main.9d38eecd.js.map",
     "453.2ddb282f.chunk.js.map": "/Portfolio-Website-Template/static/js/453.2ddb282f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14e3e899.css",
-    "static/js/main.e53e34fa.js"
+    "static/js/main.9d38eecd.js"
   ]
 }
