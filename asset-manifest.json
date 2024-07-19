@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/Portfolio-Website-Template/static/css/main.14e3e899.css",
-    "main.js": "/Portfolio-Website-Template/static/js/main.181bb89a.js",
-    "static/js/453.2ddb282f.chunk.js": "/Portfolio-Website-Template/static/js/453.2ddb282f.chunk.js",
-    "static/media/lumbar-puncture.png": "/Portfolio-Website-Template/static/media/lumbar-puncture.5c6f216cab8ae88ded55.png",
-    "static/media/brain-tumor-surgery-color-icon-illustration-vector.png": "/Portfolio-Website-Template/static/media/brain-tumor-surgery-color-icon-illustration-vector.b543e764f42b2aadf502.png",
-    "static/media/6825772.jpg": "/Portfolio-Website-Template/static/media/6825772.020a24910f91bff4cb09.jpg",
-    "static/media/profile.png": "/Portfolio-Website-Template/static/media/profile.c7fe8198fca55cd60e72.png",
-    "static/media/functional-neurosurgery-color-icon-vector-41713773.png": "/Portfolio-Website-Template/static/media/functional-neurosurgery-color-icon-vector-41713773.3d09cecd095a2761c1de.png",
-    "static/media/flag.png": "/Portfolio-Website-Template/static/media/flag.4fd89c10e19cd98faca4.png",
-    "static/media/360_F_506979639_u8HH1Z9CPgxOw3RLeocTI5SI0ELnYk7k.png": "/Portfolio-Website-Template/static/media/360_F_506979639_u8HH1Z9CPgxOw3RLeocTI5SI0ELnYk7k.aa383f95c69aee2e1723.png",
-    "static/media/depositphotos_173549848-stock-illustration-vector-logo-template-human-spine.png": "/Portfolio-Website-Template/static/media/depositphotos_173549848-stock-illustration-vector-logo-template-human-spine.81800a302bab014ffdd5.png",
-    "static/media/Chiari-Malformation-awareness-ribbon-with-zipper.png": "/Portfolio-Website-Template/static/media/Chiari-Malformation-awareness-ribbon-with-zipper.afbfe9c2091f21f7d4a9.png",
-    "static/media/istockphoto-1156870811-612x612.png": "/Portfolio-Website-Template/static/media/istockphoto-1156870811-612x612.c0cfcf8660d577b906cd.png",
-    "static/media/serv-neuromod.png": "/Portfolio-Website-Template/static/media/serv-neuromod.c5203bb8e1672a2566d8.png",
-    "static/media/comma2.svg": "/Portfolio-Website-Template/static/media/comma2.1f2b6dc5f1407195f37a2dc267019898.svg",
-    "static/media/comma.svg": "/Portfolio-Website-Template/static/media/comma.2d1db551e29ede361efafaca8dd5fba6.svg",
-    "index.html": "/Portfolio-Website-Template/index.html",
-    "static/media/wave.svg": "/Portfolio-Website-Template/static/media/wave.a3087b4cb6c680ca1a526904bf424a92.svg",
-    "static/media/getFetch.cjs": "/Portfolio-Website-Template/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.14e3e899.css.map": "/Portfolio-Website-Template/static/css/main.14e3e899.css.map",
-    "main.181bb89a.js.map": "/Portfolio-Website-Template/static/js/main.181bb89a.js.map",
-    "453.2ddb282f.chunk.js.map": "/Portfolio-Website-Template/static/js/453.2ddb282f.chunk.js.map"
+    "main.css": "/static/css/main.14e3e899.css",
+    "main.js": "/static/js/main.1043a706.js",
+    "static/js/453.2ddb282f.chunk.js": "/static/js/453.2ddb282f.chunk.js",
+    "static/media/lumbar-puncture.png": "/static/media/lumbar-puncture.5c6f216cab8ae88ded55.png",
+    "static/media/brain-tumor-surgery-color-icon-illustration-vector.png": "/static/media/brain-tumor-surgery-color-icon-illustration-vector.b543e764f42b2aadf502.png",
+    "static/media/6825772.jpg": "/static/media/6825772.020a24910f91bff4cb09.jpg",
+    "static/media/profile.png": "/static/media/profile.c7fe8198fca55cd60e72.png",
+    "static/media/functional-neurosurgery-color-icon-vector-41713773.png": "/static/media/functional-neurosurgery-color-icon-vector-41713773.3d09cecd095a2761c1de.png",
+    "static/media/flag.png": "/static/media/flag.4fd89c10e19cd98faca4.png",
+    "static/media/360_F_506979639_u8HH1Z9CPgxOw3RLeocTI5SI0ELnYk7k.png": "/static/media/360_F_506979639_u8HH1Z9CPgxOw3RLeocTI5SI0ELnYk7k.aa383f95c69aee2e1723.png",
+    "static/media/depositphotos_173549848-stock-illustration-vector-logo-template-human-spine.png": "/static/media/depositphotos_173549848-stock-illustration-vector-logo-template-human-spine.81800a302bab014ffdd5.png",
+    "static/media/Chiari-Malformation-awareness-ribbon-with-zipper.png": "/static/media/Chiari-Malformation-awareness-ribbon-with-zipper.afbfe9c2091f21f7d4a9.png",
+    "static/media/istockphoto-1156870811-612x612.png": "/static/media/istockphoto-1156870811-612x612.c0cfcf8660d577b906cd.png",
+    "static/media/serv-neuromod.png": "/static/media/serv-neuromod.c5203bb8e1672a2566d8.png",
+    "static/media/comma2.svg": "/static/media/comma2.1f2b6dc5f1407195f37a2dc267019898.svg",
+    "static/media/comma.svg": "/static/media/comma.2d1db551e29ede361efafaca8dd5fba6.svg",
+    "index.html": "/index.html",
+    "static/media/wave.svg": "/static/media/wave.a3087b4cb6c680ca1a526904bf424a92.svg",
+    "static/media/getFetch.cjs": "/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
+    "main.14e3e899.css.map": "/static/css/main.14e3e899.css.map",
+    "main.1043a706.js.map": "/static/js/main.1043a706.js.map",
+    "453.2ddb282f.chunk.js.map": "/static/js/453.2ddb282f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14e3e899.css",
-    "static/js/main.181bb89a.js"
+    "static/js/main.1043a706.js"
   ]
 }
