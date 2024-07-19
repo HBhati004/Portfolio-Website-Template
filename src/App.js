@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/Portfolio-Website-Template">
       <div className="App">
         {loading ? (
           <Loading />
