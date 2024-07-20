@@ -49,6 +49,9 @@ const About = () => {
         <p className="mt-4 text-base md:text-lg text-gray-800">
           {t('about.paragraph3')}
         </p>
+        <p className="mt-4 text-base md:text-lg text-gray-800">
+          {t('about.paragraph4')}
+        </p>
       </div>
     </section>
   );

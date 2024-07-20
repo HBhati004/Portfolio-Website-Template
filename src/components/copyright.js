@@ -7,8 +7,10 @@ const Copyright = () => {
   const text = t('copyright.text', { year });
 
   return (
-    <div className="py-4 text-m border-t-4 font-medium text-center text-gray-100" style={{ backgroundColor: '#043464' }}>
-      <p dangerouslySetInnerHTML={{ __html: text }} />
+    <div className="py-4 border-t-4 font-medium text-center text-gray-100" style={{ backgroundColor: '#043464' }}>
+      <div className="flex items-center justify-center space-x-4">
+        <p>{text}</p>
+      </div>
     </div>
   );
 };

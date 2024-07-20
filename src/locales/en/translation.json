@@ -8,7 +8,7 @@
     },
     "hero": {
         "greeting": "Hello, I'm",
-        "description": "I am dedicated to providing the best medical care.",
+        "description": "Expert Neurosurgeon Dedicated to Transforming Lives Through Advanced Medical Care",
         "bookAppointment": "Book Appointment",
         "casesSolved": "Cases Solved",
         "happyPatients": "Happy Patients",
@@ -17,9 +17,10 @@
     },
     "about": {
         "title": "About Me",
-        "paragraph1": "I am Dr. Bhavin Patel, a dedicated medical professional with over a decade of experience in providing top-notch healthcare services. My journey in the medical field has been driven by a passion for helping others and a commitment to excellence.",
-        "paragraph2": "Over the years, I have had the privilege of solving numerous complex cases and bringing smiles to the faces of my patients. My approach combines the latest medical advancements with a compassionate and patient-centric philosophy.",
-        "paragraph3": "When I am not in the clinic, you can find me reading the latest medical journals, attending conferences, and continually updating my knowledge to serve my patients better."
+        "paragraph1": "I am Dr. Bhavin Patel, a dedicated neurosurgeon with extensive experience in treating a wide range of neurological conditions. My medical journey has been marked by a steadfast commitment to providing exceptional care and improving the lives of my patients.",
+        "paragraph2": "Currently, I am serving at AIMS Hospital in Modasa, where I continue to address complex neurological challenges with precision and compassion.",
+        "paragraph3": "My expertise spans numerous advanced surgical procedures, including brain tumor excision, base of skull surgery, and deep brain stimulation. I am passionate about integrating the latest medical innovations with a patient-centered approach, ensuring the highest standard of care.",
+        "paragraph4": "My goal is to provide my patients with the best possible outcomes and to contribute meaningfully to the field of neurosurgery."
     },
     "qualification": {
         "title": "Experience",
@@ -94,14 +95,14 @@
         "emailTitle": "Email",
         "email": "email@example.com",
         "contactNumberTitle": "Contact Number",
-        "contactNumber": "+123 456 7890",
+        "contactNumber": "+91 9940108203",
         "name": "Dr. Bhavin Patel",
         "facebook": "https://www.facebook.com",
         "instagram": "https://www.instagram.com",
         "twitter": "https://www.twitter.com"
     },
     "copyright": {
-        "text": "© {{year}} Your Company Name. All Rights Reserved."
+        "text": "Copyright ©{{year}} Aravalli Institute of Medical Sciences. All Rights Reserved | Developed by e-Link"
     },
     "pageNotFound": {
         "title": "Page Not Found",
